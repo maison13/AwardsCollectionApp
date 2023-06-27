@@ -63,7 +63,7 @@ struct FoxDrawingView: View {
                 }
                 .stroke(Color.black, style: StrokeStyle(lineWidth: 4))
                 Path { path in
-                    path.move(to: CGPoint(x: 200, y: 84))
+                    path.move(to: CGPoint(x: middle, y: 84))
                     path.addLine(to: CGPoint(x: 250, y: 230))
                     path.addLine(to: CGPoint(x: 230, y: 290))
                     path.addLine(to: CGPoint(x: 170, y: 290))
