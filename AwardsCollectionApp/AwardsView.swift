@@ -12,14 +12,16 @@ struct AwardsView: View {
         NavigationStack {
             VStack {
                 ScrollView {
+                    FoxDrawingView()
+                        .frame(width: 400, height: 400)
                     GradientRectangles()
                         .frame(width: 200, height: 200)
+                    
                     PathView()
                         .frame(width: 200, height: 200)
                     CurvesView()
                         .frame(width: 200, height: 200)
-                    FoxDrawingView()
-                        .frame(width: 400, height: 400)
+                    
                 }
             }
             .navigationBarTitle("Awards")

@@ -63,32 +63,32 @@ struct FoxDrawingView: View {
                 }
                 .stroke(Color.black, style: StrokeStyle(lineWidth: 4))
                 Path { path in
-                    path.move(to: CGPoint(x: middle, y: 84))
-                    path.addLine(to: CGPoint(x: 250, y: 230))
-                    path.addLine(to: CGPoint(x: 230, y: 290))
-                    path.addLine(to: CGPoint(x: 170, y: 290))
-                    path.addLine(to: CGPoint(x: 150, y: 230))
+                    path.move(to: CGPoint(x: middle, y: (nearLine * 2 + (nearLine/10)+2)))
+                    path.addLine(to: CGPoint(x: (((nearLine / 4) * 5) + middle), y: (((nearLine / 4) * 3) + middle)))
+                    path.addLine(to: CGPoint(x: (((nearLine / 4) * 3) + middle), y: (((nearLine / 4) * 9) + middle)))
+                    path.addLine(to: CGPoint(x: (middle - ((nearLine / 4) * 3)), y: (((nearLine / 4) * 9) + middle)))
+                    path.addLine(to: CGPoint(x: (middle - ((nearLine / 4) * 5)), y: (middle + ((nearLine / 4) * 3))))
                     path.closeSubpath()
                 }
                 .stroke(Color.black, style: StrokeStyle(lineWidth: 4))
                 Path { path in
-                    path.move(to: CGPoint(x: 120, y: 120))
-                    path.addLine(to: CGPoint(x: 160, y: 200))
+                    path.move(to: CGPoint(x: farLine / 3, y: farLine / 3))
+                    path.addLine(to: CGPoint(x: middle - nearLine, y: middle))
                 }
                 .stroke(Color.black, style: StrokeStyle(lineWidth: 4))
                 Path { path in
-                    path.move(to: CGPoint(x: 149, y: 230))
-                    path.addLine(to: CGPoint(x: 120, y: 225))
-                    path.addLine(to: CGPoint(x: 51, y: 200))
-                    path.addLine(to: CGPoint(x: 60, y: 162))
-                    path.addLine(to: CGPoint(x: 90, y: 190))
-                    path.addLine(to: CGPoint(x: 130, y: 200))
+                    path.move(to: CGPoint(x: ((middle/2) + nearLine + (nearLine/nearLine)*6), y: (middle + ((nearLine / 4) * 3))))
+                    path.addLine(to: CGPoint(x: farLine / 3, y: (middle + (nearLine/8)*5)))
+                    path.addLine(to: CGPoint(x: nearLine + (nearLine/nearLine) + (nearLine / 4), y: middle))
+                    path.addLine(to: CGPoint(x: (nearLine + (nearLine/2)), y: (middle - ((nearLine / 4) * 3) + (nearLine/nearLine)*2)))
+                    path.addLine(to: CGPoint(x: (nearLine*2 + (nearLine / 4)), y: middle-(nearLine / 4)))
+                    path.addLine(to: CGPoint(x: farLine/3 + (nearLine / 4), y: middle))
                     path.closeSubpath()
                 }
                 .stroke(Color.black, style: StrokeStyle(lineWidth: 4))
                 Path { path in
-                    path.move(to: CGPoint(x: 120, y: 198))
-                    path.addLine(to: CGPoint(x: 70, y: 207))
+                    path.move(to: CGPoint(x: farLine/3, y: (middle - (nearLine/nearLine)*2)))
+                    path.addLine(to: CGPoint(x: nearLine*2 - ((nearLine / 4)), y: middle + (nearLine/nearLine)*7))
                 }
                 .stroke(Color.black, style: StrokeStyle(lineWidth: 4))
                 
